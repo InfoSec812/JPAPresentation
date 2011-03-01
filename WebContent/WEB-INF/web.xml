@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>JPAPresentation</display-name>
+  <servlet>
+    <description>Initialization Servlet - Sets up all back-end configurations</description>
+    <servlet-name>Init</servlet-name>
+    <servlet-class>com.dns.jpa.example.servlets.Init</servlet-class>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  <servlet>
+    <description>Handles all interactions with the Person entity</description>
+    <display-name>PersonServlet</display-name>
+    <servlet-name>PersonServlet</servlet-name>
+    <servlet-class>com.dns.jpa.example.servlets.PersonServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>PersonServlet</servlet-name>
+    <url-pattern>/people</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description>Handles all interactions with the Department entity</description>
+    <display-name>DepartmentServlet</display-name>
+    <servlet-name>DepartmentServlet</servlet-name>
+    <servlet-class>com.dns.jpa.example.servlets.DepartmentServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DepartmentServlet</servlet-name>
+    <url-pattern>/departments</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description>Perform searches against the Person and Department entities</description>
+    <display-name>Search</display-name>
+    <servlet-name>Search</servlet-name>
+    <servlet-class>com.dns.jpa.example.servlets.Search</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Search</servlet-name>
+    <url-pattern>/search</url-pattern>
+  </servlet-mapping>
+</web-app>
