@@ -12,8 +12,8 @@
 		<span style="font-size: 18pt; font-weight: bold; text-decoration: underline;">JPA Demonstration App</span>
 		<br />
 		<br />
-		<div style="border-top: 1px solid black; height: 100%;">
-			<div style="width: 33%; float: left; border: 0px; border-right: 1px solid black; border-bottom: 1px solid black;">
+		<div style="border-top: 1px solid black; border-bottom: 1px solid black; height: 500px;">
+			<div style="width: 33%; height: 500px; float: left; border: 0px; border-right: 1px solid black;">
 				<span style="font-size: 14pt; font-weight: bold;">Add Employee</span>
 				<br /><br />
 				<div style="width: 70%;">
@@ -32,7 +32,7 @@
 					</form>
 				</div>
 			</div>
-			<div style="width: 33%; height: 100%; float: left; border: 0px; border-right: 1px solid black; border-bottom: 1px solid black;">
+			<div style="width: 33%; height: 500px; float: left; border: 0px; border-right: 1px solid black;">
 				<span style="font-size: 14pt; font-weight: bold;">Add Department</span>
 				<br /><br />
 				<br /><br />
@@ -47,11 +47,20 @@
 					</form>
 				</div>
 			</div>
-			<div style="width: 33%; height: 100%; float: left; border: 0px; border-bottom: 1px solid black;">
+			<div style="width: 33%; height: 500px; float: left; border: 0px;">
 				<span style="font-size: 14pt; font-weight: bold;">Search</span>
 				<br /><br />
-				<form action="search" method="POST">
-				</form>
+				<div style="width: 70%;">
+					<form action="search" method="POST">
+						<div style="width: 100%; text-align: right;">Search Type: 
+						<select name="searchSelect" id="searchType" style="width: 120px;">
+							<option value="people">Person</option>
+							<option value="departments">Department</option>
+						</select>
+						</div>
+						<div style="width: 100%; text-align: right;">Keywords: <input style="width: 120px;" name="keywords" id="keywords"><br /></div>
+					</form>
+				</div>
 			</div>
 		</div>
 	</div>
